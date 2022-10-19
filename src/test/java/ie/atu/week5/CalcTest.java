@@ -30,7 +30,11 @@ class CalcTest {
     {
         assertEquals(3, test.add(1,2));
     }
-
+    @Test
+    void testSubtract()
+    {
+        assertEquals(-2, test.subtract(3, 5));
+    }
     @AfterEach
     void tearDown() {
     }
