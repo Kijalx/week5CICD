@@ -19,6 +19,8 @@ public class Calc {
         int total = val1 + val2;
         return total;
     }
-
-
+    public int subtract(int val1, int val2) {
+        int total = val1 - val2;
+        return total;
+    }
 }
