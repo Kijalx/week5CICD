@@ -19,7 +19,6 @@ class CalcTest {
         Exception exMessage = assertThrows(IllegalArgumentException.class, ()->{new Calc(4);});
         assertEquals("This is not a valid number", exMessage.getMessage());
     }
-
     @Test
     void testConstructorPass()
     {
@@ -34,6 +33,28 @@ class CalcTest {
     void testSubtract()
     {
         assertEquals(-2, test.subtract(3, 5));
+    }
+    @Test
+    void testMultiply()
+    {
+        assertEquals(27.5, test.multiply(5.5, 5));
+    }
+    @Test
+    void testDivideFailVal1()
+    {
+        Exception exMessage = assertThrows(IllegalArgumentException.class, ()->{test.divide(0,1);});
+        assertEquals("This is not a valid number", exMessage.getMessage());
+    }
+    @Test
+    void testDivideFailVal2()
+    {
+        Exception exMessage = assertThrows(IllegalArgumentException.class, ()->{test.divide(1,0);});
+        assertEquals("This is not a valid number", exMessage.getMessage());
+    }
+    @Test
+    void testDivideNoFail()
+    {
+        assertEquals(1, test.divide(5, 5));
     }
     @AfterEach
     void tearDown() {
