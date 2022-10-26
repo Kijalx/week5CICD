@@ -16,6 +16,11 @@ public class Calc {
             throw new IllegalArgumentException("This is not a valid number");
         }
     }
+
+    public int returnCountValue() {
+        return countValue;
+    }
+
     public double add(int val1, int val2) {
         total = val1 + val2;
         return total;

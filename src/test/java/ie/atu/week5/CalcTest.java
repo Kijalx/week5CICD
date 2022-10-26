@@ -22,7 +22,8 @@ class CalcTest {
     @Test
     void testConstructorPass()
     {
-        new Calc(6);
+        Calc newCalc = new Calc(6);
+        assertEquals(6,newCalc.returnCountValue());
     }
     @Test
     void testAdd()
@@ -54,7 +55,7 @@ class CalcTest {
     @Test
     void testDivideNoFail()
     {
-        assertEquals(1, test.divide(5, 5));
+        assertEquals(1.25, test.divide(5, 4));
     }
     @AfterEach
     void tearDown() {
