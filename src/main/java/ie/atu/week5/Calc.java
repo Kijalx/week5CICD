@@ -1,7 +1,7 @@
 package ie.atu.week5;
 
 public class Calc {
-    private int countValue;
+    public int countValue;
     private double total;
 
     public Calc(){
@@ -9,7 +9,7 @@ public class Calc {
     }
 
     public Calc(int startingValue){
-        if(startingValue > 5){
+        if(startingValue >= 5){
             countValue = startingValue;
         }
         else{
